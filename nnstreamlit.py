@@ -28,12 +28,9 @@ np.random.seed(1)
 
 def main():
     st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.title("Neural Networks Web App")
-    st.sidebar.title("Neural Networks Web App")
-    st.markdown(" Problem Statement: You are given a dataset ('data.h5') containing:")
-    st.markdown("- a training set of m_train images labelled as cat (1) or non-cat (0)")
-    st.markdown("- a test set of m_test images labelled as cat and non-cat")
-    st.markdown("- each image is of shape (num_px, num_px, 3) where 3 is for the 3 channels (RGB).")
+    st.title("Simple Neural Networks Web App")
+    st.sidebar.title("Simple Neural Networks Web App")
+ 
     
     train_x_orig, train_y, test_x_orig, test_y, classes = load_data()
     # Reshape the training and test examples 
@@ -42,6 +39,12 @@ def main():
 # Standardize data to have feature values between 0 and 1.
     train_x = train_x_flatten/255.
     test_x = test_x_flatten/255.
+    
+    st.markdown(" Problem Statement: You are given a dataset ('data.h5') containing:")
+    message="- a training set of " + len(train_x_flatten) " images labelled as cat (1) or non-cat (0)"
+    st.markdown(message)
+    st.markdown("- a test set of m_test images labelled as cat and non-cat")
+    st.markdown("- each image is of shape (num_px, num_px, 3) where 3 is for the 3 channels (RGB).")
     
     
     def display(index):
