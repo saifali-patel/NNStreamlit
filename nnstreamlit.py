@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+!pip install sklearn
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
