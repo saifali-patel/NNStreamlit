@@ -45,7 +45,7 @@ def main():
     
     
     def display(index):
-        plt.rcParams['figure.figsize'] = (8.0, 4.0) # set default size of plots
+        plt.rcParams['figure.figsize'] = (4.0, 4.0) # set default size of plots
         plt.rcParams['image.interpolation'] = 'nearest'
         plt.rcParams['image.cmap'] = 'gray'
         plt.imshow(train_x_orig[index])
