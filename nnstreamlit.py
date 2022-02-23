@@ -41,7 +41,7 @@ def main():
     test_x = test_x_flatten/255.
     
     st.markdown(" Problem Statement: You are given a dataset ('data.h5') containing:")
-    message="- a training set of " + (train_x_flatten.size()) " images labelled as cat (1) or non-cat (0)"
+    message="- a training set of " + (train_x_flatten.shape[0]) " images labelled as cat (1) or non-cat (0)"
     st.markdown(message)
     st.markdown("- a test set of m_test images labelled as cat and non-cat")
     st.markdown("- each image is of shape (num_px, num_px, 3) where 3 is for the 3 channels (RGB).")
