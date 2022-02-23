@@ -285,7 +285,7 @@ def main():
         n_h = 7
         n_y = 1
         layers_dims = (n_x, n_h, n_y)
-        if st.sidebar.button("Click to Train", key='train'):
+        if st.sidebar.button("Click to Start Training", key='train'):
             st.subheader("2-Layer Neural Net in Action")
             st.markdown("PS:- Neural Net is working hard in the background,it may take some time") 
             parameters = two_layer_model(train_x, train_y, layers_dims = (n_x, n_h, n_y), num_iterations = num_iterations, print_cost=cost)
