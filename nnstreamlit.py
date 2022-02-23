@@ -28,8 +28,8 @@ np.random.seed(1)
 
 def main():
     st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.title("Simple Neural Networks Web App")
-    st.sidebar.title("Simple Neural Networks Web App By Saifali Patel")
+    st.title("Simple Neural Networks Web App By Saifali Patel")
+    st.sidebar.title("Explore the dataset and Train the model here!")
  
     
     train_x_orig, train_y, test_x_orig, test_y, classes = load_data()
