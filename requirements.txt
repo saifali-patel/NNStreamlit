@@ -1,0 +1,10 @@
+
+streamlit==0.83.0
+sklearn
+scipy
+pandas
+bumpy
+time
+h5py
+matplotlib.pyplot
+PIL
