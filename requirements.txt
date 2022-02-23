@@ -5,5 +5,5 @@ scipy
 pandas
 numpy
 h5py
-matplotlib.pyplot
+matplotlib
 PIL
