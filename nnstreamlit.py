@@ -27,6 +27,7 @@ np.random.seed(1)
 
 
 def main():
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.title("Neural Networks Web App")
     st.sidebar.title("Neural Networks Web App")
     st.markdown(" Problem Statement: You are given a dataset ('data.h5') containing:")
