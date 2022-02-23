@@ -55,8 +55,10 @@ def main():
         plt.rcParams['image.interpolation'] = 'nearest'
         plt.rcParams['image.cmap'] = 'gray'
         plt.imshow(train_x_orig[index])
-        st.write("y = " + str(train_y[0,index]) + ". It's a " + classes[train_y[0,index]].decode("utf-8") +  " picture.")
+        st.subheader("Picture is : ")
         st.pyplot()
+        # st.write("y = " + str(train_y[0,index]) + ". It's a " + classes[train_y[0,index]].decode("utf-8") +  " picture.")
+        st.subheader("It's a " + classes[train_y[0,index]].decode("utf-8") +  " picture.")
         
         
     def predict1(X, y, parameters):
