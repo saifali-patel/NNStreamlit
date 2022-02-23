@@ -268,7 +268,7 @@ def main():
         return parameters
         
     st.sidebar.subheader("Let's get familiar with the dataset")
-    option=st.sidebar.checkbox("Do you want to Explore the Dataset ?",False,key="option")
+    option=st.sidebar.checkbox("Explore the Dataset ?",False,key="option")
     
     if option:
         st.sidebar.markdown("The following will show you an image in the dataset")
