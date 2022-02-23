@@ -40,7 +40,7 @@ def main():
     train_x = train_x_flatten/255.
     test_x = test_x_flatten/255.
     
-    st.markdown(" Problem Statement: ")
+    st.subheader(" Problem Statement: ")
     st.markdown(" You are given a dataset ('data.h5') containing:")
     message="- A training set of " + str(train_x.shape[1]) + " images labelled as cat (1) or non-cat (0)."
     st.markdown(message)
