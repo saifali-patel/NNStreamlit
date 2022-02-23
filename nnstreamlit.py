@@ -267,16 +267,16 @@ def main():
     
         return parameters
         
-    st.sidebar.markdown("Let's get more familiar with the dataset")
+    st.sidebar.subheader("Let's get familiar with the dataset")
     option=st.sidebar.checkbox("Explore the Data Set ?",False,key="option")
     
     if option:
         st.sidebar.markdown("The following will show you an image in the dataset")
-        index=st.sidebar.number_input("Feel free to change the index multiple times to see other images",1,208,step=1,key="index")
+        index=st.sidebar.number_input("Feel free to change the index to see other images",1,208,step=1,key="index")
         display(index)
         
-    
-    choice1=st.sidebar.selectbox("Choose which Neural Network model you wish to use",("2-Layer","4-Layer"),key="choice1")
+    st.sidebar.subheader("Training the model")
+    choice1=st.sidebar.selectbox("Choose which Neural Network model you wish to train ",("2-Layer","4-Layer"),key="choice1")
     if choice1=="2-Layer":
         num_iterations=st.sidebar.slider("Number of Iterations for Gradient Descent: ",1500,2500,key="n_h")
         cost=st.sidebar.checkbox("Do you wish to see cost of the model after every 100 iterations ?",False,key="cost")
