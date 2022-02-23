@@ -40,7 +40,8 @@ def main():
     train_x = train_x_flatten/255.
     test_x = test_x_flatten/255.
     
-    st.markdown(" Problem Statement: You are given a dataset ('data.h5') containing:")
+    st.markdown(" Problem Statement: ")
+    st.markdown(" You are given a dataset ('data.h5') containing:")
     message="- A training set of " + str(train_x.shape[1]) + " images labelled as cat (1) or non-cat (0)."
     st.markdown(message)
     message="- A test set of " + str(test_x.shape[1]) + " unlabelled images of cats and non-cats."
@@ -55,10 +56,11 @@ def main():
         plt.rcParams['image.interpolation'] = 'nearest'
         plt.rcParams['image.cmap'] = 'gray'
         plt.imshow(train_x_orig[index])
-        st.subheader("Picture is : ")
+        message="Picture is a "+ classes[train_y[0,index]].decode("utf-8")
+        st.subheader(message)
         st.pyplot()
         # st.write("y = " + str(train_y[0,index]) + ". It's a " + classes[train_y[0,index]].decode("utf-8") +  " picture.")
-        st.subheader("It's a " + classes[train_y[0,index]].decode("utf-8") +  " picture.")
+        # st.subheader("It's a " + classes[train_y[0,index]].decode("utf-8") +  " picture.")
         
         
     def predict1(X, y, parameters):
